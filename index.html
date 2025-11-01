@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Árbol Dinámico</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link href="/static/styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 font-display text-black min-h-screen p-4"
+  >
+    <main class="w-full max-w-6xl mx-auto space-y-6">
+      <header class="text-center space-y-4 mb-6">
+        <div
+          id="titulo-root"
+          class="inline-flex items-center space-x-3 bg-primary text-white py-3 px-6 rounded-lg shadow-md"
+        ></div>
+      </header>
+
+      <section class="card bg-white p-6 rounded-lg shadow-sm">
+        <div id="app-content">
+          <!-- Aquí se cargará dinámicamente el flujo de preguntas -->
+        </div>
+
+        <div class="mt-6">
+          <div class="w-full h-1 bg-gray-200 rounded overflow-hidden">
+            <div
+              id="progress-bar"
+              class="h-full bg-primary"
+              style="width: 0%"
+            ></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2" id="path-info"></p>
+        </div>
+      </section>
+
+      <section class="space-y-3 mt-4">
+        <div class="w-full flex flex-col md:flex-row justify-end gap-2 mb-2">
+          <button
+            id="btnExportar"
+            class="flex items-center justify-center gap-2 bg-primary text-white font-semibold py-2 px-4 rounded-lg shadow transition hover:bg-primary/90"
+          >
+            <span class="material-symbols-outlined text-base">download</span>
+            Exportar JSON
+          </button>
+
+          <button
+            id="btnBorrar"
+            class="flex items-center justify-center gap-2 bg-primary text-white font-semibold py-2 px-4 rounded-lg shadow transition hover:bg-primary/90"
+          >
+            <span class="material-symbols-outlined text-base">delete</span>
+            Borrar Todo
+          </button>
+        </div>
+
+        <iframe
+          id="grafo-frame"
+          src="/ver_grafo"
+          class="w-full h-96 rounded border"
+        ></iframe>
+      </section>
+    </main>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>

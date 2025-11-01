@@ -1,0 +1,28 @@
+{
+    "nodes": [
+        {
+            "id": "A3",
+            "label": "Tecnología"
+        },
+        {
+            "id": "A3-3",
+            "label": "Inteligencia Artificial"
+        },
+        {
+            "id": "A3-3-2",
+            "label": "Redes Neuronales"
+        }
+    ],
+    "edges": [
+        {
+            "from": "A3",
+            "to": "A3-3",
+            "relation": "elige"
+        },
+        {
+            "from": "A3-3",
+            "to": "A3-3-2",
+            "relation": "elige"
+        }
+    ]
+}
